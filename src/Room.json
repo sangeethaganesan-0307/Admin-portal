@@ -1,0 +1,80 @@
+{
+    "rooms": [
+      {
+        "id": 1,
+        "name": "Meeting Room 1",
+        "capacity": 8,
+        "facilities": ["tv", "wifi", "projector"]
+      },
+      {
+        "id": 2,
+        "name": "Meeting Room 2",
+        "capacity": 7,
+        "facilities": ["tv", "wifi", "projector"]
+      },
+      {
+        "id": 3,
+        "name": "Meeting Room 3",
+        "capacity": 6,
+        "facilities": ["wifi", "projector"]
+      },
+      {
+        "id": 4,
+        "name": "Meeting Room 4",
+        "capacity": 4,
+        "facilities": ["wifi", "projector"]
+      },
+      {
+        "id": 5,
+        "name": "Phone Booth 1",
+        "capacity": 2,
+        "facilities": ["wifi"]
+      },
+      {
+        "id": 6,
+        "name": "Phone Booth 2",
+        "capacity": 2,
+        "facilities": ["wifi"]
+      },
+      {
+        "id": 7,
+        "name": "Phone Booth 3",
+        "capacity": 2,
+        "facilities": ["wifi"]
+      }
+    ],
+    "bookings": [
+      {
+        "id": 1,
+        "roomId": 1,
+        "title": "Legal Team",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "date": "2025-02-06"
+      },
+      {
+        "id": 2,
+        "roomId": 2,
+        "title": "Yearly Sales Meeting",
+        "startTime": "10:00",
+        "endTime": "11:00",
+        "date": "2025-02-06"
+      },
+      {
+        "id": 3,
+        "roomId": 4,
+        "title": "Annual Review",
+        "startTime": "11:00",
+        "endTime": "13:00",
+        "date": "2025-02-06"
+      },
+      {
+        "id": 4,
+        "roomId": 5,
+        "title": "Interview",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "date": "2025-02-06"
+      }
+    ]
+  }

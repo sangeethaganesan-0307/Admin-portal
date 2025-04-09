@@ -1,0 +1,66 @@
+export const styles = {
+    appBar: {
+      backgroundColor: "#FFFFFF",
+      color: "black",
+      zIndex: 1301,
+      boxShadow: "none",
+      borderBottom: "1px solid rgba(136,136,136,0.1)",
+    },
+    toolbar: {
+      height: "100%",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      padding: "0 24px !important",
+    },
+    title: {
+      width: "247px",
+      height: "30px",
+      fontFamily: "Plus Jakarta Sans",
+      fontSize: "24px",
+      fontWeight: 600,
+      lineHeight: "30.24px",
+      color: "#1A1A1A",
+    },
+    iconsContainer: {
+      display: "flex",
+      alignItems: "center",
+      width: "220px",
+      height: "42px",
+      gap: "15px",
+      justifyContent: "flex-end",
+    },
+    notificationButton: {
+      width: "42px",
+      height: "42px",
+      padding: 0,
+    },
+    profileSection: {
+      display: "flex",
+      alignItems: "center",
+      width: "136px",
+      height: "38px",
+      gap: "10px",
+    },
+    profileIconButton: {
+      width: "38px",
+      height: "38px",
+      borderRadius: "100px 0px 0px 0px",
+      padding: 0,
+    },
+    profileText: {
+      fontFamily: "Inter",
+      fontSize: "14px",
+      fontWeight: 500,
+      lineHeight: "16.94px",
+      width: "88px",
+      height: "17px",
+    },
+    dropdownIcon: {
+      width: "16px",
+      height: "16px",
+      color: "#6B7280",
+      transform: "rotate(0deg)",
+    },
+  };
+  

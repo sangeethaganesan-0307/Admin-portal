@@ -1,0 +1,120 @@
+.pageContainer {
+  width: 1440px;
+  height: 1024px;
+  position: relative;
+  background-color: #F1F1F1;
+  opacity: 1;
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableWrapper {
+  margin: 20px;
+  position: relative;
+}
+
+.scrollable {
+  max-height: 164px;
+  overflow-y: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.header {
+  background-color: #111827;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tableContainer {
+  width: 100%;
+  height: 205px;
+  max-height: 270px;
+  overflow-y: auto;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: 1px solid #F4F4F4;
+  opacity: 1;
+  gap: 0;
+  margin-top: 10px;
+}
+
+.scrollableContainer {
+  max-height: 205px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.tableHead {
+  position: sticky;
+  top: 0;
+  width: 1193px;
+  height: 41px;
+  padding: 12px 15px;
+  gap: 100px;
+  border-radius: 5px 5px 0px 0px;
+  background: #111827;
+}
+
+.tableBody {
+  width: 1193px;
+  height: 164px;
+  gap: 0;
+}
+
+.tableHeadCell {
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 12px 15px !important;
+}
+
+.bodyCell {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+  color: #5F5F5F;
+  width: auto;
+  height: 17px;
+  padding: 12px 15px;
+}
+
+.rowEven {
+  width: 1193px;
+  height: 41px;
+  padding: 12px 15px;
+  gap: 90px;
+  background-color: #EAFEFF;
+  border-bottom: 1px solid #F4F4F4;
+}
+
+.rowOdd {
+  width: 1193px;
+  height: 41px;
+  padding: 12px 15px;
+  gap: 90px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F4F4F4;
+}
+
+.bookingTitle {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25.2px;
+  letter-spacing: 0%;
+  margin-top: 30px;
+  color: Black;
+  margin: 0;
+}

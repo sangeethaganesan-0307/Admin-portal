@@ -1,0 +1,70 @@
+{
+    "ChennaiOTP": {
+      "rooms": [
+        {
+          "id": 1,
+          "name": "Meeting Room 1",
+          "capacity": 8,
+          "facilities": ["tv", "wifi", "projector"],
+          "location": "ChennaiOTP",
+          "status": "active"
+        },
+        {
+          "id": 4,
+          "name": "Meeting Room 4",
+          "capacity": 6,
+          "facilities": ["tv", "wifi"],
+          "location": "ChennaiOTP",
+          "status": "active"
+        },
+        {
+          "id": 7,
+          "name": "Meeting Room 7",
+          "capacity": 15,
+          "facilities": ["tv", "wifi", "projector"],
+          "location": "ChennaiOTP",
+          "status": "active"
+        }
+      ]
+    },
+    "GC": {
+      "rooms": [
+        {
+          "id": 2,
+          "name": "Meeting Room 2",
+          "capacity": 4,
+          "facilities": ["tv", "wifi"],
+          "location": "GC",
+          "status": "active"
+        },
+        {
+          "id": 5,
+          "name": "Meeting Room 5",
+          "capacity": 10,
+          "facilities": ["tv", "wifi", "projector"],
+          "location": "GC",
+          "status": "active"
+        }
+      ]
+    },
+    "Bangalore": {
+      "rooms": [
+        {
+          "id": 3,
+          "name": "Meeting Room 3",
+          "capacity": 12,
+          "facilities": ["tv", "wifi", "projector"],
+          "location": "Bangalore",
+          "status": "active"
+        },
+        {
+          "id": 6,
+          "name": "Meeting Room 6",
+          "capacity": 8,
+          "facilities": ["tv", "wifi"],
+          "location": "Bangalore",
+          "status": "active"
+        }
+      ]
+    }
+  }

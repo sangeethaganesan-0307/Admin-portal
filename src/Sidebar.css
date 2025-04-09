@@ -1,0 +1,140 @@
+/* Common text style for menu items */
+.menuTextStyle .MuiTypography-root {
+    font-family: 'Inter';
+    font-size: '14px';
+    font-weight: 500;
+    line-height: '16.94px';
+    color: '#FFFFFF';
+  }
+  
+  /* Drawer styles */
+  .drawer {
+    width: '180px';
+  }
+  
+  .drawer .MuiDrawer-paper {
+    height: '1024px';
+    padding: '15px 15px 49px 15px';
+    background-color: '#111827';
+  }
+  
+  /* Main box container */
+  .main-box {
+    width: '173px';
+    display: 'flex';
+    align-items: 'center';
+    margin-bottom: 2;
+  }
+  
+  /* Logo container */
+  .logo-box {
+    width: '173px';
+    height: '72px';
+    padding: '10px 0px 0px 0px';
+    gap: '8px';
+    display: 'flex';
+  }
+  
+  /* Inner logo container */
+  .inner-logo-box {
+    width: '152px';
+    height: '52px';
+    display: 'flex';
+    flex-direction: 'row';
+    align-items: 'center';
+    position: 'absolute';
+    left: '10px';
+    top: '10px';
+  }
+  
+  /* Logo image */
+  .logo-img {
+    width: "152px";
+    height: "52px";
+  }
+  
+  /* Content container */
+  .content-box {
+    width: '173px';
+    height: '868px';
+  }
+  
+  /* General title */
+  .general-title {
+    width: '61px';
+    height: '19px';
+    font-family: 'Inter';
+    font-size: '16px';
+    font-weight: 600;
+    line-height: '19.36px';
+    color: '#FFFFFF';
+    margin-bottom: 2;
+  }
+  
+  /* Button section */
+  .button-section {
+    width: '173px';
+    height: '113px';
+    gap: '5px';
+  }
+  
+  /* Book meeting button */
+  .book-meeting {
+    width: '173px';
+    height: '54px';
+    padding: '10px 16px';
+    border-radius: '4px 4px 4px 4px';
+    background: 'linear-gradient(90deg, #E712FC 0%, #5E8AEB 53%, #07D5DF 100%)';
+    gap: '8px';
+  }
+  
+  /* Admin button */
+  .admin-button {
+    width: '173px';
+    height: '54px';
+    padding: '10px 16px';
+    border-radius: '4px 0px 0px 0px';
+  }
+  
+  /* Help settings section */
+  .help-settings {
+    width: '157px';
+    height: '142px';
+    gap: '10px';
+    position: 'relative';
+    top: '40px';
+  }
+  
+  .help-settings-inner {
+    width: '157px';
+    height: '113px';
+    gap: '5px';
+  }
+  
+  /* Help button */
+  .help-button {
+    width: '157px';
+    height: '54px';
+    padding: '10px 16px';
+    border-radius: '6px 0px 0px 0px';
+    margin-bottom: 1;
+  }
+  
+  /* Settings button */
+  .settings-button {
+    width: '157px';
+    height: '54px';
+    padding: '10px 16px';
+    border-radius: '6px 0px 0px 0px';
+  }
+  
+  /* Icon styles */
+  .icon-style {
+    min-width: '34px';
+  }
+  
+  .icon-style .MuiSvgIcon-root {
+    width: '18px';
+    height: '18px';
+    color: '#FFFFFF';
+  }

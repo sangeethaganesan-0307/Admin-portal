@@ -1,0 +1,29 @@
+{
+    "chennai-otp": {
+      "1-10 AM": {
+        "title": "Yearly Sales Meeting",
+        "description": "Annual sales review with global team",
+        "date": "2024-02-12",
+        "duration": "1h"
+      },
+      "4-11 AM": {
+        "title": "Annual Review",
+        "description": "Performance review meeting",
+        "date": "2024-02-12",
+        "duration": "2h"
+      },
+      "1-12 PM": {
+        "title": "Legal Team",
+        "description": "Contract review session",
+        "date": "2024-02-12",
+        "duration": "1h"
+      },
+      "4-01 PM": {
+        "title": "Interview",
+        "description": "Technical interview round",
+        "date": "2024-02-12",
+        "duration": "1h"
+      }
+    },
+    "bangalore": {}
+  }

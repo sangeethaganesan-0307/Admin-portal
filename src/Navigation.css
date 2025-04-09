@@ -1,0 +1,75 @@
+.box-container {
+    flex-grow: 1;
+  }
+  
+  .app-bar {
+    background-color: #FFFFFF;
+    color: black;
+    z-index: 1301;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(136,136,136,0.1);
+  }
+  
+  .toolbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px !important;
+  }
+  
+  .title {
+    width: 247px;
+    height: 30px;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30.24px;
+    color: #1A1A1A;
+  }
+  
+  .icons-container {
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 42px;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+  
+  .notification-button {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    width: 136px;
+    height: 38px;
+    gap: 10px;
+  }
+  
+  .profile-button {
+    width: 38px;
+    height: 38px;
+    border-radius: 100px 0px 0px 0px;
+    padding: 0;
+  }
+  
+  .username-text {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    width: 88px;
+    height: 17px;
+  }
+  
+  .dropdown-icon {
+    width: 16px;
+    height: 16px;
+    color: #6B7280;
+    transform: rotate(0deg);
+  }

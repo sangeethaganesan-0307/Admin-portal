@@ -1,0 +1,684 @@
+/* General Styles */
+.calendar-container-with-specifications{
+  background: white;
+    padding: 20px;
+    width: 970px;
+    border-radius: 5px;
+}
+.calendar-container {
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.calendar-wrapper {
+  width: 100%;
+  overflow: auto; /* Changed from overflow-x and overflow-y to just overflow */
+  max-height: 600px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  position: relative; /* Add position relative */
+}
+
+
+.calendar-table {
+  width: 100%;
+  border-collapse: separate; /* Change from collapse to separate */
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+/* Sticky Headers */
+.time-header,
+.room-header {
+  position: sticky;
+  top: 0;
+  background: #EAFEFF;
+  z-index: 10;
+  padding: 16px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.room-header {
+  position: sticky;
+  top: 0;
+  background: #EAFEFF;
+  z-index: 10;
+  padding: 16px;
+  border-bottom: 2px solid #e5e7eb;
+  width: 300px;
+  text-align: center;
+}
+
+.time-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 68px;
+  text-align: center;
+  z-index: 20; /* Higher z-index to stay on top at the corner */
+  background: #EAFEFF;
+  border-bottom: 2px solid #e5e7eb;
+  /* border-right: 1px solid #e5e7eb; */
+}
+
+tbody tr:hover .time-column {
+  background-color: #f3f4f6;
+}
+/* Meeting Room Sidebar */
+.room-column {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  width: 300px;
+  background: #ffffff;
+  padding: 16px;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.time-column {
+  width: 100px;
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 15; /* Higher than other cells but lower than the corner header */
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* Time Slot Styles */
+.time-slot {
+  width: 120px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background-color 0.2s;
+}
+
+/* Hover Effect */
+.time-slot:hover {
+  background-color: #f3f4f6;
+}
+
+/* Booked Meetings */
+.time-slot.booked {
+  background-color: #01477c;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Alternating Background for Booked Slots */
+.time-slot.booked:nth-child(even) {
+  background-color: #003b6f;
+}
+
+/* Meeting Title in Booked Slots */
+.meeting-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 4px;
+}
+
+/* Filter Container */
+.filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  background-color: #01477c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: auto !important;;
+}
+
+.filter-btn.active {
+  background-color: #004b87;
+  color: white;
+  border-color: #004b87;
+}
+
+/* Capacity & Facilities */
+.capacity-select {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  background: white;
+}
+
+
+.room-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.room-name {
+  font-weight: 500;
+}
+
+.room-details {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 0.875rem;
+  justify-content: center;
+}
+
+.capacity {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.facility {
+  font-size: 1rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  /* padding: 20px; */
+  background: white;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90vw;
+}
+
+.modal-header {
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.829);
+  color: white;
+}
+
+.modal-content {
+  padding: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-select,
+.form-input,
+.form-textarea {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  /* width: 100%; */
+}
+
+.form-textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.char-count {
+  text-align: right;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Modal Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.btn-cancel,
+.btn-save,
+.btn-edit,
+.btn-delete,
+.btn-close {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-save,
+.btn-edit {
+  background-color: #004b87;
+  color: white;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: white;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+/* Header Styles */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+
+.new-booking-btn {
+  padding: 8px 16px;
+  background-color: #004b87;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-left: 490px;
+  
+}
+
+/* Table Row Hover Effect */
+.calendar-table tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+.time-column {
+  width: 100px;
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 5;
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid #e5e7eb;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.time-slot-container {
+  height: 80px; /* Adjust this value to control the total height of each hour slot */
+  padding: 0;
+  border: 1px solid #e5e7eb;
+}
+
+.time-slot-half {
+  height: 50%;
+  cursor: pointer;
+  transition: background-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time-slot-half:first-child {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.time-slot-half:hover {
+  background-color: #f1f5f9;
+}
+
+.time-slot-half.booked {
+  background-color: #01477c;
+  color: white;
+  font-weight: 500;
+}
+
+.calendar-specifications-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.location-select,
+.date-select {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  min-width: 150px;
+}
+
+/* Add these styles to your existing TeamsCalendar.css file */
+
+.edit-btn {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 10;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.edit-btn:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.time-slot-half {
+  position: relative;
+}
+
+.btn-edit {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.btn-edit:hover {
+  background-color: #45a049;
+}
+
+/* .external-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch.active {
+  background-color: #2196F3;
+}
+
+.toggle-circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-switch.active .toggle-circle {
+  transform: translateX(20px);
+} */
+
+/* Toggle switches styling (reused from previous example) */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-switch.active {
+  background-color: #2196F3;
+}
+
+.toggle-circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.toggle-switch.active .toggle-circle {
+  transform: translateX(20px);
+}
+
+/* Recurrence panel styling */
+.recurrence-panel {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.recurrence-panel h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.recurrence-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.recurrence-row label {
+  width: 100px;
+  color: white;
+}
+
+.date-input {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-bottom: 1px solid #666;
+  padding: 8px;
+}
+
+.number-input {
+  background-color: #333;
+  color: white;
+  border: none;
+  width: 50px;
+  text-align: center;
+  padding: 8px;
+}
+
+.period-select {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px;
+}
+
+.weekday-selector {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.weekday-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.weekday-circle.selected {
+  background-color: #6366F1;
+}
+
+.recurrence-summary {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.recurrence-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.recurrence-actions .btn-cancel {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: white;
+}
+
+.recurrence-actions .btn-save {
+  background-color: #6366F1;
+}
+
+.success-message {
+  background-color: #dff0d8;
+  color: #3c763d;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: 500;
+}
+.selected-location-heading {
+  margin: 15px 0;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+
+}
+.repeat-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.toggle-and-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.toggle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.recurrence-status {
+  color: #4caf50;
+  font-size: 14px;
+  animation: fadeIn 0.3s ease-in;
+}
+.room-name-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.room-name {
+  flex-grow: 1;
+}
+
+.edit-room-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 5px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.edit-room-btn:hover {
+  color: #000;
+}
+
+.facilities-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.facility-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.time-slot-half.pending {
+  background-color: #BBDEFB; /* Light blue for pending */
+}
+.time-slot-half.booked {
+  background-color: #1976D2; /* Dark blue for approved */
+}
