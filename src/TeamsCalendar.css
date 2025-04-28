@@ -349,7 +349,7 @@ tbody tr:hover .time-column {
 }
 
 .time-slot-half {
-  height: 50%;
+  height: 100%;
   cursor: pointer;
   transition: background-color;
   overflow: hidden;
@@ -357,15 +357,16 @@ tbody tr:hover .time-column {
   white-space: nowrap;
 }
 
-.time-slot-half:first-child {
+/* .time-slot-half:first-child {
   border-bottom: 1px solid #e5e7eb;
-}
+} */
 
 .time-slot-half:hover {
   background-color: #f1f5f9;
 }
 
 .time-slot-half.booked {
+  height: 100%;
   background-color: #01477c;
   color: white;
   font-weight: 500;
@@ -679,6 +680,12 @@ tbody tr:hover .time-column {
 .time-slot-half.pending {
   background-color: #BBDEFB; /* Light blue for pending */
 }
-.time-slot-half.booked {
-  background-color: #1976D2; /* Dark blue for approved */
+/* .time-slot-half.booked {
+  background-color: #1976D2;
+} */
+
+.pending {
+  background-color: #55A0D9;  /* Sky Blue for pending bookings */
+  color: black; 
+
 }
